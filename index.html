@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budova H · Nové kanceláře k pronájmu v Brně | Centrum Kaštanová</title>
+<meta name="description" content="Nové kancelářské prostory k pronájmu v Brně na ulici Kaštanová – Budova H. Přes 1 250 m² ve 2. a 3. NP, individuální členění, energetická třída B. Dokončení červenec 2027.">
+<link rel="canonical" href="https://h.kastanova.cz/">
+<meta property="og:title" content="Budova H · Nové kanceláře k pronájmu v Brně">
+<meta property="og:description" content="Nové kancelářské prostory na Kaštanové v Brně. Přes 1 250 m² ve 2. a 3. NP, individuální členění, třída B.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://h.kastanova.cz/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#161615; --muted:#6c6c69; --soft:#8c8c88; --line:#e6e5e2;
+    --bg:#ffffff; --band:#f4f3f1; --dark:#161614; --accent:#1d1d1b;
+    --wrap:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:17px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  h1,h2,h3{line-height:1.1;letter-spacing:-.02em;font-weight:700}
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+  .btn{display:inline-flex;align-items:center;gap:.5em;background:var(--dark);color:#fff;
+    text-decoration:none;font-weight:600;font-size:.95rem;padding:14px 26px;border-radius:40px;
+    transition:transform .15s ease,opacity .15s ease}
+  .btn:hover{transform:translateY(-1px);opacity:.92}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);padding:13px 25px}
+  .link-arrow{display:inline-flex;align-items:center;gap:.4em;font-weight:600;text-decoration:none;
+    border-bottom:1.5px solid var(--ink);padding-bottom:2px}
+  .link-arrow:hover{opacity:.7}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:var(--dark);color:#fff}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.14em;font-size:1.05rem;text-decoration:none;color:#fff}
+  .brand .ring{width:30px;height:30px;border-radius:50%;background:
+    radial-gradient(circle at 50% 50%,#161614 0 32%,#cfcfca 34% 60%,#f3f3f0 62% 100%);
+    box-shadow:0 0 0 1px rgba(255,255,255,.15)}
+  .nav-links{display:flex;gap:30px;font-size:.92rem;font-weight:500}
+  .nav-links a{text-decoration:none;color:#e9e9e6;opacity:.86}
+  .nav-links a:hover{opacity:1}
+
+  /* Hero */
+  .hero{position:relative;min-height:clamp(380px,56vh,560px);display:flex;align-items:center;
+    background:#2a2a27;color:#fff;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,rgba(14,14,12,.82) 0%,rgba(14,14,12,.5) 45%,rgba(14,14,12,.08) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero .eyebrow{color:rgba(255,255,255,.82)}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:800;margin:14px 0 0;max-width:12ch}
+  .hero .cap{position:absolute;right:28px;bottom:20px;z-index:2;font-size:.76rem;color:rgba(255,255,255,.7)}
+
+  section{padding:76px 0}
+  .divider{border:0;border-top:1px solid var(--line)}
+
+  /* Intro */
+  .intro h2{font-size:clamp(1.9rem,3.6vw,2.6rem)}
+  .intro p.lead{color:var(--muted);font-size:1.12rem;max-width:62ch;margin-top:18px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:40px 0 34px;
+    border-top:1px solid var(--line);padding-top:30px}
+  .stats .lab{font-size:.82rem;color:var(--muted)}
+  .stats .num{font-size:2rem;font-weight:700;letter-spacing:-.02em;margin-top:6px}
+  .cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .cta-row .tel{font-weight:600;text-decoration:none;font-size:1.05rem}
+
+  figure{margin:0}
+  figure img{width:100%;height:clamp(300px,42vw,520px);object-fit:cover;border-radius:4px}
+  figcaption{font-size:.8rem;color:var(--soft);margin-top:12px}
+
+  h2.sec{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:34px}
+
+  /* Přehled table */
+  .table{display:grid}
+  .row{display:grid;grid-template-columns:minmax(180px,.42fr) 1fr;gap:20px;
+    padding:20px 0;border-top:1px solid var(--line)}
+  .row:last-child{border-bottom:1px solid var(--line)}
+  .row .k{color:var(--muted)}
+  .row .v{font-weight:500}
+
+  /* Možnosti */
+  .opts p{color:var(--muted);max-width:64ch}
+  .opts ul{list-style:none;margin:26px 0;display:grid;gap:14px;max-width:70ch}
+  .opts li{position:relative;padding-left:26px;color:var(--ink)}
+  .opts li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--ink)}
+  .callout{background:var(--band);border-radius:6px;padding:22px 26px;color:var(--muted);max-width:none;margin:28px 0;font-size:.98rem}
+  .opts-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+
+  /* Služby */
+  .svc{display:grid;grid-template-columns:1fr 1fr;gap:34px 56px}
+  .svc .item{border-top:1px solid var(--line);padding-top:18px}
+  .svc h3{font-size:1.08rem;font-weight:600}
+  .svc p{color:var(--muted);font-size:.96rem;margin-top:4px}
+
+  /* Cena */
+  .price-band{background:var(--band);border-radius:8px;display:grid;grid-template-columns:1fr 1fr;
+    gap:24px;padding:34px 38px;margin:26px 0 30px}
+  .price-band .lab{font-size:.85rem;color:var(--muted)}
+  .price-band .big{font-size:2.3rem;font-weight:700;letter-spacing:-.02em;margin-top:6px}
+  .terms .row .v{color:var(--muted);font-weight:400}
+  .fineprint{color:var(--soft);font-size:.92rem;max-width:72ch;margin:22px 0 24px}
+
+  /* Kontakt */
+  .contact{background:var(--dark);color:#fff;border-radius:10px;padding:56px 48px;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .contact h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+  .contact p{color:rgba(255,255,255,.76);margin-top:16px;max-width:46ch}
+  .contact .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:28px 30px}
+  .contact .who{font-weight:600;font-size:1.15rem}
+  .contact .role{color:rgba(255,255,255,.6);font-size:.9rem;margin:2px 0 18px}
+  .contact .line{display:flex;gap:10px;margin-top:10px;font-size:1.05rem}
+  .contact a{color:#fff;text-decoration:none}
+  .contact a:hover{text-decoration:underline}
+
+  /* Footer */
+  footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 0;font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot .fb{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;letter-spacing:.14em}
+  .foot .ring{width:24px;height:24px;border-radius:50%;background:
+    radial-gradient(circle at 50% 50%,#161614 0 32%,#cfcfca 34% 60%,#f3f3f0 62% 100%)}
+  .foot a{color:rgba(255,255,255,.7);text-decoration:none}
+  .foot a:hover{color:#fff}
+
+  @media(max-width:760px){
+    body{font-size:16px}
+    .nav-links{display:none}
+    section{padding:52px 0}
+    .stats{grid-template-columns:1fr;gap:20px}
+    .row{grid-template-columns:1fr;gap:4px}
+    .svc{grid-template-columns:1fr;gap:22px}
+    .price-band{grid-template-columns:1fr;gap:18px;padding:26px}
+    .contact{grid-template-columns:1fr;padding:38px 26px}
+    .hero .cap{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="ring"></span>KAŠTANOVÁ</a>
+    <nav class="nav-links">
+      <a href="#nabidka">Nabídka</a>
+      <a href="#lokalita">Lokalita</a>
+      <a href="#cena">Cena</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="img/hero.jpg" alt="Budova H – vizualizace kancelářské budovy na Kaštanové v Brně">
+  <div class="wrap">
+    <div class="eyebrow">Brno · Kaštanová · Budova H</div>
+    <h1>Nové kanceláře k pronájmu v Brně</h1>
+  </div>
+  <div class="cap">Vizualizace budoucí podoby</div>
+</div>
+
+<!-- INTRO -->
+<section class="intro" id="nabidka">
+  <div class="wrap">
+    <h2>Budova H · Centrum Kaštanová</h2>
+    <p class="lead">Nové kancelářské prostory v Brně na ulici Kaštanová. Projekt nabízí přes 1 250 m²
+      kancelářských ploch ve 2. a 3. nadzemním podlaží s možností individuálního členění.</p>
+    <div class="stats">
+      <div><div class="lab">Kancelářské plochy projektu</div><div class="num">1 250+ m²</div></div>
+      <div><div class="lab">Konkrétní nabízená varianta</div><div class="num">300 m²</div></div>
+      <div><div class="lab">Nájemné této varianty / m² / měsíc</div><div class="num">326 Kč</div></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="#kontakt">Vyžádat nabídku →</a>
+      <a class="tel" href="tel:+420728782782">728 782 782</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO 1 -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure>
+      <img src="img/budova-1.jpg" alt="Budova H – vizualizace plánované podoby">
+      <figcaption>Budova H · Vizualizace plánované podoby</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PŘEHLED NABÍDKY -->
+<section id="prehled">
+  <div class="wrap">
+    <h2 class="sec">Přehled nabídky</h2>
+    <div class="table">
+      <div class="row"><div class="k">Umístění</div><div class="v">Kaštanová 515/125a, Brno</div></div>
+      <div class="row"><div class="k">Typ prostor</div><div class="v">Kanceláře k pronájmu</div></div>
+      <div class="row"><div class="k">Kancelářské plochy projektu</div><div class="v">Přes 1 250 m² ve 2. a 3. NP</div></div>
+      <div class="row"><div class="k">Možnosti členění</div><div class="v">Individuální úpravy dispozice dle dohody</div></div>
+      <div class="row"><div class="k">Stav projektu</div><div class="v">Novostavba ve výstavbě</div></div>
+      <div class="row"><div class="k">Plánované dokončení</div><div class="v">Červenec 2027</div></div>
+      <div class="row"><div class="k">Energetická náročnost</div><div class="v">Třída B – velmi úsporná</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOŽNOSTI -->
+<section class="opts" id="uprav">
+  <div class="wrap">
+    <h2 class="sec">Možnosti uspořádání a úprav</h2>
+    <p>Členění kancelářských jednotek lze přizpůsobit individuálním požadavkům nájemce. Rozsah
+      dokončovacích úprav, jejich cenu a harmonogram je nutné dohodnout pro konkrétní prostor.</p>
+    <ul>
+      <li>Možnost individuálního členění kanceláří a úprav interiéru (fit-out).</li>
+      <li>Nová budova v nízkoenergetickém standardu, energetická třída B.</li>
+      <li>Dostatek denního světla a reprezentativní vstupní prostory.</li>
+    </ul>
+    <div class="callout">Poptáváte jinou velikost, více jednotek nebo showroom? Uveďte požadovanou
+      výměru a způsob využití. Dostupné varianty projednáme individuálně.</div>
+    <div class="opts-actions">
+      <a class="btn-ghost btn" href="img/pudorys-2-3-patro.png" download>Stáhnout ukázkový půdorys (2. a 3. patro) ↓</a>
+      <a class="link-arrow" href="#kontakt">Vyžádat technické podklady →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOTO 2 -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure>
+      <img src="img/budova-2.jpg" alt="Budova H – vizualizace vnitřní části">
+      <figcaption>Budova H · Vizualizace vnitřní části</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- DOSTUPNOST -->
+<section id="lokalita">
+  <div class="wrap">
+    <h2 class="sec">Dostupnost a služby v okolí</h2>
+    <p style="color:var(--muted);max-width:60ch;margin-bottom:34px">Areál na jihu Brna nabízí
+      dopravní napojení i zázemí pro každodenní provoz firmy.</p>
+    <div class="svc">
+      <div class="item"><h3>Dálnice D1 a D2 v blízkosti</h3><p>Napojení na hlavní dálniční tahy.</p></div>
+      <div class="item"><h3>Dostatek parkovacích míst</h3><p>Parkování v areálu pro nájemce a návštěvy.</p></div>
+      <div class="item"><h3>Kavárna přímo v areálu</h3><p>Café Kaštanová s venkovním posezením.</p></div>
+      <div class="item"><h3>Fitness v blízkém okolí</h3><p>GYMNATION v nedalekém OC Kaštanová.</p></div>
+      <div class="item"><h3>Nákupy a služby poblíž</h3><p>Obchodní centrum Kaštanová na stejné ulici.</p></div>
+      <div class="item"><h3>Dostupnost MHD</h3><p>Autobusová zastávka Rájecek v blízkosti areálu.</p></div>
+      <div class="item"><h3>Jednací a školicí místnosti</h3><p>Další prostory v rámci centra k pronájmu.</p></div>
+      <div class="item"><h3>Zavedený podnikatelský areál</h3><p>Firmy z oblasti bydlení, stavebnictví a designu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CENA -->
+<section id="cena">
+  <div class="wrap">
+    <h2 class="sec">Cena a obchodní podmínky</h2>
+    <p style="color:var(--muted)">Uvedená cena se vztahuje k nabízenému prostoru o výměře 300 m².</p>
+    <div class="price-band">
+      <div><div class="lab">Nájemné za m² / měsíc</div><div class="big">326 Kč</div></div>
+      <div><div class="lab">Nájemné za 300 m² / měsíc</div><div class="big">97 800 Kč</div></div>
+    </div>
+    <div class="table terms">
+      <div class="row"><div class="k">Servisní poplatek</div><div class="v">Hradí se nad rámec nájemného; výše na vyžádání</div></div>
+      <div class="row"><div class="k">Energie</div><div class="v">Zálohy se hradí samostatně</div></div>
+      <div class="row"><div class="k">Provize</div><div class="v">Nájemce neplatí provizi</div></div>
+    </div>
+    <p class="fineprint">Celkové náklady doplníme podle konkrétní jednotky a rozsahu úprav. Délku nájmu,
+      kauci, podmínky parkování a termín předání je potřeba upřesnit v individuální nabídce.</p>
+    <a class="link-arrow" href="#kontakt">Poptat kompletní cenovou nabídku →</a>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Vyžádejte si nabídku prostor</h2>
+        <p>Pošlete nám požadovanou výměru, způsob využití a předpokládaný termín nastěhování.
+          Probereme dostupné možnosti, dispozice a podmínky pronájmu.</p>
+      </div>
+      <div class="card">
+        <div class="who">Ivana Kostúrová</div>
+        <div class="role">Pronájem kancelářských a obchodních prostor</div>
+        <div class="line"><span>☎</span><a href="tel:+420728782782">728 782 782</a></div>
+        <div class="line"><span>✉</span><a href="mailto:ivana.kosturova@novira.com">ivana.kosturova@novira.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="fb"><span class="ring"></span>KAŠTANOVÁ</div>
+    <div>Centrum bydlení a designu · Kaštanová 515/125a, Brno</div>
+    <div><a href="https://kastanova.cz" target="_blank" rel="noopener">kastanova.cz</a></div>
+  </div>
+</footer>
+
+<!-- Statistiky návštěvnosti: doplnit měřicí kód (GoatCounter / Plausible / náš beacon) -->
+
+</body>
+</html>
