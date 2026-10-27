@@ -47,7 +47,26 @@ html{scroll-behavior:auto}.hero-sub{max-width:700px}.section-nav{display:flex;ga
 .inquiry-form{border-top:1px solid #d5d5d2;margin-top:34px;padding-top:30px}.inquiry-form h3{font-size:24px;margin-bottom:14px}.inquiry-form>p{font-size:13px;line-height:1.6}.form-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:19px 22px;margin-top:23px}.form-field{min-width:0}.form-field label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}.form-field label span{font-size:11px;font-weight:400;color:#666}.form-field input,.form-field textarea{display:block;width:100%;min-width:0;max-width:100%;padding:11px 12px;border:1px solid #aaa;background:#fff;color:#202020;border-radius:0;font:inherit;font-size:16px;line-height:1.5}.form-field input{min-height:48px}.form-field textarea{resize:vertical;min-height:140px}.form-field input:focus-visible,.form-field textarea:focus-visible{outline:2px solid #202020;outline-offset:2px}.form-wide{grid-column:1/-1}.form-privacy{margin:19px 0 20px}.inquiry-form .button{border:0;cursor:pointer;max-width:100%;text-align:left}.form-status{margin:17px 0 0}.form-status:empty{display:none}@media(max-width:680px){.form-grid{grid-template-columns:minmax(0,1fr)}.inquiry-form h3{font-size:22px}.inquiry-form .button{gap:16px;font-size:13px}}
 
 </style>
-</head>
+
+<style id="galerie-css">
+.galerie-sec .gal-wrap{max-width:1020px;margin:auto;padding:0 40px}
+.galerie-sec h2{margin-bottom:10px}
+.galerie-sec .gal-sub{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8a8a8a;margin:34px 0 16px}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.gal-item{padding:0;border:0;background:#eee;cursor:pointer;overflow:hidden;border-radius:2px;aspect-ratio:3/2;position:relative}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,opacity .3s}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-item:focus-visible{outline:2px solid #111;outline-offset:2px}
+.gal-stavba{color:#8a8a8a;font-size:15px;max-width:620px;line-height:1.6}
+.lb{position:fixed;inset:0;background:rgba(17,17,17,.94);display:none;align-items:center;justify-content:center;z-index:9999}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain;box-shadow:0 10px 50px rgba(0,0,0,.5)}
+.lb-btn{position:absolute;background:none;border:0;color:#fff;font-size:40px;cursor:pointer;padding:14px 20px;opacity:.8;line-height:1}
+.lb-btn:hover{opacity:1}
+.lb-prev{left:2vw}.lb-next{right:2vw}.lb-close{top:2vh;right:2vw;font-size:34px}
+.lb-count{position:absolute;bottom:3vh;left:0;right:0;text-align:center;color:#ccc;font-size:14px;letter-spacing:.1em}
+@media(max-width:600px){.gal-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px}.galerie-sec .gal-wrap{padding:0 20px}.lb-btn{font-size:30px}}
+</style></head>
 <body>
   <a class="skip" href="#nabidka">Přejít na nabídku</a>
   <header class="header">
@@ -123,7 +142,15 @@ html{scroll-behavior:auto}.hero-sub{max-width:700px}.section-nav{display:flex;ga
       </form>
 </section>
   </main>
-  <footer><div class="footer-inner"><img src="assets/img1.png" alt="Kaštanová" width="150" height="46"><p>Centrum bydlení a designu Kaštanová<br>Kaštanová 515/125a · Brno</p><a href="https://www.kastanova.cz/zpracovani-osobnich-udaju/">Ochrana osobních údajů</a></div></footer>
+  <section class="section galerie-sec" aria-labelledby="galerie"><div class="gal-wrap">
+<h2 id="galerie">Fotogalerie</h2>
+<p class="dark" style="max-width:700px">Podívejte se na prostředí areálu Centrum Kaštanová, jehož je budova H součástí.</p>
+<p class="gal-sub">Centrum Kaštanová</p>
+<div class="gal-grid"><button class="gal-item" data-i="1" aria-label="Zvětšit fotku 1"><img src="assets/galerie/g01.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 1"></button><button class="gal-item" data-i="2" aria-label="Zvětšit fotku 2"><img src="assets/galerie/g02.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 2"></button><button class="gal-item" data-i="3" aria-label="Zvětšit fotku 3"><img src="assets/galerie/g03.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 3"></button><button class="gal-item" data-i="4" aria-label="Zvětšit fotku 4"><img src="assets/galerie/g04.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 4"></button><button class="gal-item" data-i="5" aria-label="Zvětšit fotku 5"><img src="assets/galerie/g05.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 5"></button><button class="gal-item" data-i="6" aria-label="Zvětšit fotku 6"><img src="assets/galerie/g06.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 6"></button><button class="gal-item" data-i="7" aria-label="Zvětšit fotku 7"><img src="assets/galerie/g07.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 7"></button><button class="gal-item" data-i="8" aria-label="Zvětšit fotku 8"><img src="assets/galerie/g08.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 8"></button><button class="gal-item" data-i="9" aria-label="Zvětšit fotku 9"><img src="assets/galerie/g09.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 9"></button><button class="gal-item" data-i="10" aria-label="Zvětšit fotku 10"><img src="assets/galerie/g10.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 10"></button><button class="gal-item" data-i="11" aria-label="Zvětšit fotku 11"><img src="assets/galerie/g11.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 11"></button><button class="gal-item" data-i="12" aria-label="Zvětšit fotku 12"><img src="assets/galerie/g12.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 12"></button><button class="gal-item" data-i="13" aria-label="Zvětšit fotku 13"><img src="assets/galerie/g13.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 13"></button><button class="gal-item" data-i="14" aria-label="Zvětšit fotku 14"><img src="assets/galerie/g14.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 14"></button><button class="gal-item" data-i="15" aria-label="Zvětšit fotku 15"><img src="assets/galerie/g15.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 15"></button><button class="gal-item" data-i="16" aria-label="Zvětšit fotku 16"><img src="assets/galerie/g16.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 16"></button><button class="gal-item" data-i="17" aria-label="Zvětšit fotku 17"><img src="assets/galerie/g17.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 17"></button><button class="gal-item" data-i="18" aria-label="Zvětšit fotku 18"><img src="assets/galerie/g18.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 18"></button><button class="gal-item" data-i="19" aria-label="Zvětšit fotku 19"><img src="assets/galerie/g19.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 19"></button><button class="gal-item" data-i="20" aria-label="Zvětšit fotku 20"><img src="assets/galerie/g20.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 20"></button><button class="gal-item" data-i="21" aria-label="Zvětšit fotku 21"><img src="assets/galerie/g21.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 21"></button><button class="gal-item" data-i="22" aria-label="Zvětšit fotku 22"><img src="assets/galerie/g22.jpg" loading="lazy" alt="Centrum Kaštanová – fotografie 22"></button></div>
+<p class="gal-sub">Fotogalerie stavby</p>
+<p class="gal-stavba">Fotografie z průběhu výstavby budovy H zde budeme průběžně doplňovat.</p>
+</div></section>
+<footer><div class="footer-inner"><img src="assets/img1.png" alt="Kaštanová" width="150" height="46"><p>Centrum bydlení a designu Kaštanová<br>Kaštanová 515/125a · Brno</p><a href="https://www.kastanova.cz/zpracovani-osobnich-udaju/">Ochrana osobních údajů</a></div></footer>
 
   <script>
     (function () {
@@ -162,4 +189,18 @@ html{scroll-behavior:auto}.hero-sub{max-width:700px}.section-nav{display:flex;ga
       });
     }());
   </script>
-</body></html>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Prohlížeč fotek"><button class="lb-btn lb-close" id="lbClose" aria-label="Zavřít">&times;</button><button class="lb-btn lb-prev" id="lbPrev" aria-label="Předchozí">&#8249;</button><img id="lbImg" src="" alt=""><button class="lb-btn lb-next" id="lbNext" aria-label="Další">&#8250;</button><div class="lb-count" id="lbCount"></div></div>
+<script>
+(function(){var N=22,cur=1;var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cnt=document.getElementById('lbCount');
+function pad(n){return ('0'+n).slice(-2);}
+function show(i){cur=((i-1+N)%N)+1;img.src='assets/galerie/g'+pad(cur)+'.jpg';cnt.textContent=cur+' / '+N;}
+function open(i){show(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+function close(){lb.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.gal-item').forEach(function(b){b.addEventListener('click',function(){open(parseInt(b.dataset.i));});});
+document.getElementById('lbClose').onclick=close;
+document.getElementById('lbNext').onclick=function(e){e.stopPropagation();show(cur+1);};
+document.getElementById('lbPrev').onclick=function(e){e.stopPropagation();show(cur-1);};
+lb.addEventListener('click',function(e){if(e.target===lb)close();});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
+})();
+</script></body></html>
