@@ -181,4 +181,47 @@ html{scroll-behavior:auto}.hero-sub{max-width:700px}.section-nav{display:flex;ga
       });
     }());
   </script>
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Prohlížeč fotek"><button class="lb-btn lb-close" id="lbClose" aria-label="Zavřít">&times;</button><button class="lb-btn lb-prev" id="lbPrev" aria-label="Předchozí">&#8249;</button><img id="lbImg" src="" alt=""><button class="lb-btn lb-next" id="lbNext" aria-label="Další">&#8250;</button><div class="lb-count" id="lbCount"></div></div><script>(function(){var lb=document.getElementById("lb"),img=document.getElementById("lbImg"),cnt=document.getElementById("lbCount");var cur=[],idx=0;function show(){img.src=cur[idx];cnt.textContent=(idx+1)+" / "+cur.length;}function open(items,i){cur=items;idx=i;show();lb.classList.add("open");document.body.style.overflow="hidden";}function close(){lb.classList.remove("open");document.body.style.overflow="";}function step(d){idx=(idx+d+cur.length)%cur.length;show();}document.querySelectorAll(".gal-grid").forEach(function(grid){var imgs=[].map.call(grid.querySelectorAll(".gal-item img"),function(im){return im.getAttribute("data-full")||im.getAttribute("src");});grid.querySelectorAll(".gal-item").forEach(function(btn,i){btn.addEventListener("click",function(){open(imgs,i);});});});document.getElementById("lbClose").onclick=close;document.getElementById("lbNext").onclick=function(e){e.stopPropagation();step(1);};document.getElementById("lbPrev").onclick=function(e){e.stopPropagation();step(-1);};lb.addEventListener("click",function(e){if(e.target===lb)close();});document.addEventListener("keydown",function(e){if(!lb.classList.contains("open"))return;if(e.key==="Escape")close();if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1);});})();</script></body></html>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Prohlížeč fotek"><button class="lb-btn lb-close" id="lbClose" aria-label="Zavřít">&times;</button><button class="lb-btn lb-prev" id="lbPrev" aria-label="Předchozí">&#8249;</button><img id="lbImg" src="" alt=""><button class="lb-btn lb-next" id="lbNext" aria-label="Další">&#8250;</button><div class="lb-count" id="lbCount"></div></div><script>(function(){var lb=document.getElementById("lb"),img=document.getElementById("lbImg"),cnt=document.getElementById("lbCount");var cur=[],idx=0;function show(){img.src=cur[idx];cnt.textContent=(idx+1)+" / "+cur.length;}function open(items,i){cur=items;idx=i;show();lb.classList.add("open");document.body.style.overflow="hidden";}function close(){lb.classList.remove("open");document.body.style.overflow="";}function step(d){idx=(idx+d+cur.length)%cur.length;show();}document.querySelectorAll(".gal-grid").forEach(function(grid){var imgs=[].map.call(grid.querySelectorAll(".gal-item img"),function(im){return im.getAttribute("data-full")||im.getAttribute("src");});grid.querySelectorAll(".gal-item").forEach(function(btn,i){btn.addEventListener("click",function(){open(imgs,i);});});});document.getElementById("lbClose").onclick=close;document.getElementById("lbNext").onclick=function(e){e.stopPropagation();step(1);};document.getElementById("lbPrev").onclick=function(e){e.stopPropagation();step(-1);};lb.addEventListener("click",function(e){if(e.target===lb)close();});document.addEventListener("keydown",function(e){if(!lb.classList.contains("open"))return;if(e.key==="Escape")close();if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1);});})();</script><style>
+#cc-bar{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#241c16;color:#f3ece1;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;padding:18px 22px;box-shadow:0 -6px 24px rgba(0,0,0,.28);display:none}
+#cc-bar.show{display:block}
+#cc-bar .cc-wrap{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+#cc-bar p{margin:0;flex:1 1 320px;font-size:14px;line-height:1.55;color:#e6dccb}
+#cc-bar a{color:#d8bd84;text-decoration:underline}
+#cc-bar .cc-btns{display:flex;gap:10px;flex-wrap:wrap}
+#cc-bar button{border:0;cursor:pointer;font-size:14px;font-weight:600;padding:11px 22px;border-radius:8px;font-family:inherit}
+#cc-bar .cc-ok{background:#b5934f;color:#241c16}
+#cc-bar .cc-ok:hover{background:#c9a862}
+#cc-bar .cc-no{background:transparent;color:#cbbfad;border:1px solid #6b5e49}
+#cc-bar .cc-no:hover{border-color:#b5934f;color:#f3ece1}
+@media(max-width:560px){#cc-bar .cc-btns{width:100%}#cc-bar button{flex:1}}
+</style>
+<div id="cc-bar" role="dialog" aria-live="polite" aria-label="Souhlas s cookies">
+  <div class="cc-wrap">
+    <p>Tento web používá cookies k analýze návštěvnosti a marketingu (Meta Pixel). Kliknutím na „Souhlasím“ nám pomůžete web vylepšovat. Více v <a href="https://www.kastanova.cz/zasady-ochrany-osobnich-udaju/" target="_blank" rel="noopener">zásadách ochrany osobních údajů</a>.</p>
+    <div class="cc-btns">
+      <button class="cc-no" id="ccNo" type="button">Odmítnout</button>
+      <button class="cc-ok" id="ccOk" type="button">Souhlasím</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY="kastanova_cc";
+  function loadPixel(){
+    if(window.__fbqLoaded)return;window.__fbqLoaded=true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1635927219996006');fbq('track','PageView');
+  }
+  var bar=document.getElementById("cc-bar");
+  var saved=null;try{saved=localStorage.getItem(KEY);}catch(e){}
+  if(saved==="yes"){loadPixel();}
+  else if(saved!=="no"){bar.classList.add("show");}
+  document.getElementById("ccOk").onclick=function(){try{localStorage.setItem(KEY,"yes");}catch(e){}bar.classList.remove("show");loadPixel();};
+  document.getElementById("ccNo").onclick=function(){try{localStorage.setItem(KEY,"no");}catch(e){}bar.classList.remove("show");};
+})();
+</script>
+</body></html>
