@@ -75,7 +75,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .hero__cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .hero__note{font-size:.82rem;color:rgba(247,242,233,.65);display:flex;align-items:center;gap:9px}
 .hero__dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(205,160,92,.25)}
-.hero__chips{position:absolute;right:32px;bottom:72px;display:flex;flex-direction:column;gap:12px;z-index:2;text-align:right}
+.hero__chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px;z-index:2}
 .hero__chip{backdrop-filter:blur(8px);background:rgba(247,242,233,.1);border:1px solid rgba(247,242,233,.22);border-radius:14px;padding:12px 18px;min-width:168px}
 .hero__chip b{font-family:var(--display);font-size:1.5rem;color:var(--gold-soft);display:block;line-height:1}
 .hero__chip span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,242,233,.7)}
@@ -103,10 +103,10 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .stat{border-top:2px solid var(--bronze);padding-top:20px}
 .stat b{font-family:var(--display);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:700;color:var(--ink);display:block;line-height:1.1;letter-spacing:-.02em;text-wrap:balance}
-.stat span{display:block;margin-top:12px;font-size:.95rem;color:var(--muted);max-width:22ch}
+.stat span{display:block;margin-top:12px;font-size:1rem;color:#574b39;max-width:24ch}
 .param-strip{display:flex;flex-wrap:wrap;gap:10px 40px;margin-top:48px;padding-top:30px;border-top:1px solid var(--line)}
 .param-strip span{font-size:.95rem;color:var(--ink)}
-.param-strip em{font-style:normal;display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);margin-bottom:3px}
+.param-strip em{font-style:normal;display:block;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);margin-bottom:3px}
 
 /* SPLIT */
 .split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,6vw,90px);align-items:center}
@@ -244,7 +244,7 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
   .split,.cta{grid-template-columns:1fr}
   .split--rev .split__media{order:0}
   .loc-grid{grid-template-columns:1fr}
-  .hero__chips{display:none}
+  .hero__chips{margin-top:26px;gap:10px}
   .gal{grid-auto-rows:180px}
   .g-s{grid-column:span 4}
   .g-a{grid-column:span 12;grid-row:span 2}
@@ -331,13 +331,13 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
       <a href="#dispozice" class="btn btn--gold">Vybrat kancelář</a>
       <a href="#poptavka" class="btn btn--ghost-l">Domluvit prohlídku</a>
     </div>
-  </div>
-  <div class="hero__chips">
+      <div class="hero__chips">
     <div class="hero__chip"><b>přes 2 000 m²</b><span>Nových kanceláří</span></div>
     <div class="hero__chip"><b>od 27 m²</b><span>Až po celé patro</span></div>
     <div class="hero__chip"><b>D1 · D2</b><span>Pár minut na dálnici</span></div>
     <div class="hero__chip"><b>štítek B</b><span>Nízkoenergetický standard</span></div>
   </div>
+    </div>
 </header>
 
 <!-- STATEMENT -->
@@ -351,11 +351,12 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
       <div class="pillar"><b>Interiéry</b><span>Showroom i kancelář na jednom místě</span></div>
       <div class="pillar"><b>Design</b><span>Reprezentativní adresa pro vaše klienty</span></div>
     </div>
+    <div class="rv" style="text-align:center;margin-top:48px"><a href="#parametry" class="btn btn--ghost-l">Prohlédnout parametry</a></div>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="section">
+<section class="section" id="parametry">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Přehled nabídky</span>
@@ -374,6 +375,7 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
       <span><em>Parkování</em> v areálu · včetně nabíjení EV</span>
       <span><em>Stav</em> ve výstavbě</span>
     </div>
+    <div class="rv" style="text-align:center;margin-top:44px"><a href="#poptavka" class="btn btn--gold">Nezávazně poptat</a></div>
 
   </div>
 </section>
@@ -394,6 +396,7 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
         <li><div><b>Nízkoenergetický standard</b><small>Energetický štítek B – úsporný provoz.</small></div></li>
         <li><div><b>Synergie areálu</b><small>Firmy z oblasti bydlení, stavebnictví a designu na dosah.</small></div></li>
       </ul>
+      <div style="margin-top:34px"><a href="#dispozice" class="btn btn--gold">Prohlédnout dispozice</a></div>
     </div>
   </div>
 </section>
