@@ -555,6 +555,7 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
         <p style="margin-top:22px;font-size:.82rem;color:rgba(247,242,233,.55);max-width:42ch">Cena a obchodní podmínky: celkové náklady doplníme podle konkrétní jednotky a rozsahu úprav.</p>
       </div>
       <form id="poptForm" novalidate>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
         <div class="f-row">
           <div class="field"><label>Jméno</label><input type="text" name="jmeno" required placeholder="Jan Novák"></div>
           <div class="field"><label>Firma</label><input type="text" name="firma" placeholder="Název firmy"></div>
@@ -572,6 +573,7 @@ footer{background:var(--ink);color:rgba(247,242,233,.6);padding:70px 0 34px}
         <button type="submit" class="btn btn--gold">Odeslat poptávku</button>
         <p class="form-note">Odesláním souhlasíte se zpracováním údajů pro účely vyřízení poptávky. Více v <a href="zasady-ochrany-osobnich-udaju.html" style="color:inherit;text-decoration:underline">Zásadách ochrany osobních údajů</a>.</p>
         <div class="form-ok" id="formOk">Děkujeme! Vaši poptávku jsme přijali, brzy se vám ozveme.</div>
+        <p id="formErr" style="display:none;margin-top:12px;color:#b00020;font-size:.92rem"></p>
       </form>
     </div>
   </div>
@@ -628,7 +630,7 @@ var _nav=document.getElementById('nav'),_bg=document.getElementById('burger');
 _bg.onclick=function(){_nav.classList.toggle('open');_bg.classList.toggle('open');};
 _nav.querySelectorAll('.nav__links a').forEach(function(a){a.addEventListener('click',function(){_nav.classList.remove('open');_bg.classList.remove('open');});});
 // form
-document.getElementById('poptForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formOk').style.display='block';this.querySelector('button[type=submit]').style.display='none';});
+document.getElementById('poptForm').addEventListener('submit',function(e){e.preventDefault();var f=this,btn=f.querySelector('button[type=submit]'),err=document.getElementById('formErr');err.style.display='none';btn.disabled=true;var old=btn.textContent;btn.textContent='Odesílám…';fetch('https://strankyprovas.cz/form/kastanova.php',{method:'POST',body:new FormData(f)}).then(function(r){return r.json().catch(function(){return{ok:false};});}).then(function(j){if(j&&j.ok){document.getElementById('formOk').style.display='block';btn.style.display='none';f.reset();}else{btn.disabled=false;btn.textContent=old;err.textContent=(j&&j.error)||'Zprávu se nepodařilo odeslat. Napište prosím na ivana.kosturova@novira.com.';err.style.display='block';}}).catch(function(){btn.disabled=false;btn.textContent=old;err.textContent='Zprávu se nepodařilo odeslat. Napište prosím na ivana.kosturova@novira.com.';err.style.display='block';});});
 // lightbox
 var imgs=[].slice.call(document.querySelectorAll('.gal img')),lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),idx=0;
 function show(i){idx=(i+imgs.length)%imgs.length;lbImg.src=imgs[idx].src;lbImg.alt=imgs[idx].alt;}
